@@ -5,45 +5,35 @@ import Linkedin from '@/public/assets/topbar/Linkedin.svg';
 import Twitter from '@/public/assets/topbar/Twitter.svg';
 import Line from '@/public/assets/topbar/line.svg';
 import { BritishFlag } from './svg/BritishFlag';
-import { Dropdown, Container, Grid, useTheme } from '@nextui-org/react';
+import { DropdownIcon } from './svg/Dropdown';
 
 
 const Topbar = () => {
-    const theme = useTheme();
     return (
-        <Grid css={{ '@mdMax': { display: 'none' } }}>
-            <Grid css={{
-                border: '1px solid $black',
-                background: '$pink',
-                display: 'flex',
-                justifyContent: 'space-around'
-            }}>
-                <Container display='flex' justify='space-between' responsive={true}>
-                    <Grid css={{ display: 'flex' }}>
-                        <Image src={Linkedin} className='linkedin-svg' alt='linkedin' />
-                        <Image src={Line} className='line-svg' alt='Line' />
-                        <Image src={Facebook} className='facebook-svg' alt='facebook' />
-                        <Image src={Line} className='line-svg' alt='Line' />
-                        <Image src={Twitter} className='twitter-svg' alt='twitter' />
-                    </Grid>
-                    <div className="lan">
-                        <Dropdown>
-                            <Dropdown.Button light color="transparent">
-                                <BritishFlag /> <span className='lan-text'>ENG</span>
-                            </Dropdown.Button>
-                            <Dropdown.Menu color="secondary" aria-label="Actions">
-                                <Dropdown.Item
-                                    key="eng"
-                                    icon={<BritishFlag />}
-                                >
-                                    ENG
-                                </Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
+        <div className='bg-lavender border-2 border-black md:max-lg:hidden'>
+            <div className="container mx-auto">
+                <div className="flex justify-between">
+                    <div className='flex'>
+                        <Image className='mr-4' src={Facebook} alt="Facebook" />
+                        <Image className='mr-4' src={Line} alt="Line1" />
+                        <Image className='mr-4' src={Linkedin} alt="Linkedin" />
+                        <Image className='mr-4' src={Line} alt="Line2" />
+                        <Image className='mr-4' src={Twitter} alt="Twitter" />
                     </div>
-                </Container>
-            </Grid>
-        </Grid>
+                    <div>
+                        <div className="dropdown dropdown-end"> <label tabIndex={0} className="btn btn-ghost"><BritishFlag />
+                            <span className='mx-2 text-martinique font-normal normal text-base font-mulish'>Eng</span><DropdownIcon /></label>
+                            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><a><BritishFlag />
+                                    <span className='ml-2 text-martinique font-normal normal text-base font-mulish'>Eng</span></a></li>
+                                <li><a><BritishFlag />
+                                    <span className='ml-2 text-martinique font-normal normal text-base font-mulish'>Eng</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 

@@ -1,4 +1,3 @@
-import { Button, Container, Grid, Navbar, Text } from '@nextui-org/react';
 import Image from 'next/image';
 import React from 'react';
 import Logo from '@/public/assets/navbar/logo.svg'
@@ -7,73 +6,45 @@ import { Hamburguer } from './svg/Hamburguer';
 
 
 const Navigation = () => {
-    const collapseItems = [
-        "Home",
-        "FAQ",
-        "Blog",
-        "Pricing",
-        "Contact"
-    ];
     return (
-        <Grid css={{
-            '@mdMin': {
-                bg: 'linear-gradient(217deg, var(--blue), var(--pink) 80.71%)'
-            }
-        }}>
-            <Container responsive={true}>
-                <Navbar variant="sticky" disableShadow={true} maxWidth={'xl'} css={{ 'background': 'transparent' }}>
-                    <Navbar.Brand>
-                        <div className='logo'>
-                            <Image src={Logo} alt="logo" />
-                        </div>
-                    </Navbar.Brand>
-                    <Navbar.Content hideIn="md">
-                        <Navbar.Link href="#" className='nav-link'>Home</Navbar.Link>
-                        <Navbar.Link href="#" className='nav-link'>
-                            FAQ
-                        </Navbar.Link>
-                        <Navbar.Link href="#" className='nav-link'>Blog</Navbar.Link>
-                        <Navbar.Link href="#" className='nav-link'>Pricing</Navbar.Link>
-                        <Navbar.Link href="#" className='nav-link'>Contact</Navbar.Link>
-                    </Navbar.Content>
-                    <Navbar.Toggle aria-label="toggle navigation" children={<Hamburguer />} showIn={'md'} />
-                    <Navbar.Content hideIn="md">
-                        <Navbar.Link className='login-btn' href="#">
-                            LOG IN
-                        </Navbar.Link>
-                        <Navbar.Link className='signup-btn' href="#">
-                            SIGN UP
-                        </Navbar.Link>
-                        <Navbar.Toggle aria-label="toggle navigation" showIn={'md'} />
-                    </Navbar.Content>
-                    <Navbar.Collapse css={{ background: 'linear-gradient(230deg, var(--blue), var(--pink) 40.71%);' }}>
-                        {collapseItems.map((item, index) => (
-                            <Navbar.CollapseItem key={item}>
-                                <Link
-                                    color="inherit"
-                                    css={{
-                                        minWidth: "100%",
-                                    }}
-                                    href="#"
-                                >
-                                    {item}
-                                </Link>
-                            </Navbar.CollapseItem>
-                        ))}
-                        <Navbar.CollapseItem key={'login'} css={{ display: 'flex', justifyContent: 'center' }}>
-                            <Link className='login-btn' href="#">
-                                LOG IN
-                            </Link>
-                        </Navbar.CollapseItem>
-                        <Navbar.CollapseItem key={'signup'} css={{ display: 'flex', justifyContent: 'center' }}>
-                            <Link className='signup-btn' href="#">
-                                SIGN UP
-                            </Link>
-                        </Navbar.CollapseItem>
-                    </Navbar.Collapse>
-                </Navbar>
-            </Container>
-        </Grid>
+        <div className='container mx-auto'>
+            <div className="navbar bg-transparent">
+                <div className="navbar-start">
+                    <Link href={"#"}>
+                        <Image src={Logo} alt="Logo" />
+                    </Link>
+                </div>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Home</Link></li>
+                        <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">FAQ</Link></li>
+                        <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Blog</Link></li>
+                        <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Pricing</Link></li>
+                        <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Contact</Link></li>
+                    </ul>
+                </div>
+                <div className="navbar-end">
+                    <div className='hidden lg:block'>
+                        <Link href={"#"} className="bg-transparent underline underline-offset-1 text-minsk font-mulish font-bold uppercase text-xs mr-8 font-normal normal">Log in</Link>
+                        <Link href={"#"} className="bg-gradient-to-r from-lavender to-minsk rounded py-3 px-10 font-mulish font-normal normal font-black text-white uppercase">Sign up</Link>
+                    </div>
+                    <div className="dropdown dropdown-left">
+                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                            <Hamburguer />
+                        </label>
+                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Home</Link></li>
+                            <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">FAQ</Link></li>
+                            <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Blog</Link></li>
+                            <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Pricing</Link></li>
+                            <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Contact</Link></li>
+                            <li><Link href={"#"} className="bg-transparent underline underline-offset-1 text-minsk font-mulish font-bold uppercase text-xs mr-8 font-normal normal">Log in</Link></li>
+                            <li><Link href={"#"} className="bg-gradient-to-r from-lavender to-minsk rounded py-3 px-10 font-mulish font-normal normal font-black text-white uppercase">Sign up</Link></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 
