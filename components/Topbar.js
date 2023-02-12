@@ -10,7 +10,7 @@ import { DropdownIcon } from './svg/Dropdown';
 
 const Topbar = () => {
     return (
-        <div className='bg-lavender border-2 border-black md:max-lg:hidden'>
+        <div className='bg-lavender md:max-lg:hidden'>
             <div className="container mx-auto">
                 <div className="flex justify-between">
                     <div className='flex'>
