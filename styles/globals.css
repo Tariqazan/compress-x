@@ -30,6 +30,25 @@
     border-radius: 10px;
 }
 
+@media screen and (min-width: 1100px) {
+    body {
+        background-image: url('../public/assets/background/gear.png'),
+            url('../public/assets/background/gallery.png'), url('../public/assets/background/plus.png'),
+            url('../public/assets/background/pie.png'), url('../public/assets/background/plus.png'),
+            url('../public/assets/background/cube.png'), url('../public/assets/background/offwhite-cube.png'),
+            url('../public/assets/background/offwhite-cube.png'), url('../public/assets/background/arrow-dart.png');
+        background-position: 20px 600px, 1200px 200px, 120px 200px, 1200px 924px, 1150px 1080px, 100px 1350px, 1250px 2100px, 60px 3080px, 1050px 3350px;
+        background-repeat: no-repeat;
+        background-size: 105px 105px, 120px 110px, 34px 34px, 160px 150px, 34px 34px, 50px 50px, 50px 50px, 50px 50px, 230px 175px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        background-position: 20px 600px, 1600px 200px, 280px 200px, 1780px 924px, 1740px 1080px, 225px 1480px, 1750px 1860px, 110px 3150px, 1650px 3400px;
+    }
+}
+
 #input-file-upload {
     display: none;
 }

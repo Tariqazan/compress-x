@@ -103,10 +103,10 @@ const UploadFile = () => {
                     <p className="text-center mb-5 font-normal normal text-kimberly font-mulish text-base">You have attached <span className="font-bold">{imageList.length}</span> files</p>
                     <div class="grid grid-cols-4 gap-4">
                         {imageList.map((image, index) => (
-                            <div className="relative" key={index}>
-                                <img className="py-5 h-100 w-100" src={image} />
+                            <div className="relative group" key={index}>
+                                <img className="py-5 h-44 w-40" src={image} />
                                 <p className="font-mukta font-normal normal text-sm text-martinique">Image_{index + 1}</p>
-                                <div className="absolute top-6 right-2">
+                                <div className="absolute top-6 right-2 z-10">
                                     <button className="bg-transparent" onClick={() => {
                                         const newImageList = [...imageList]
                                         newImageList.splice(index, 1)
@@ -115,8 +115,8 @@ const UploadFile = () => {
                                         <Exclude />
                                     </button>
                                 </div>
-                                <div className="absolute bottom-12 flex justify-center w-full">
-                                    <button className="bg-gradient-to-r to-minsk from-lavender rounded w-full mx-1 py-1 font-mulish font-black normal text-white uppercase text-xs" onClick={() => {
+                                <div className="absolute p-1 inset-0 bg-black bg-opacity-50 h-36 top-4 flex justify-center w-full invisible group-hover:visible">
+                                    <button className="bg-gradient-to-r absolute bottom-4 h-5 to-minsk from-lavender rounded w-full mx-1 py-1 font-mulish font-black normal text-white uppercase text-xs" onClick={() => {
                                         const link = document.createElement('a');
                                         link.href = image;
                                         link.download = `Image_${index + 1}.jpg`;
