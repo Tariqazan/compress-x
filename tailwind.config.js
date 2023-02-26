@@ -23,6 +23,24 @@ module.exports = {
         '2xl': '6rem',
       },
     },
+    fontSize: {
+      x64: '64px',
+      x60: '60px',
+      x55: '55px',
+      x50: '50px',
+      x40: '40px',
+      x36: '36px',
+      x30: '30px',
+      x28: '28px',
+      x24: '24px',
+      x20: '20px',
+      x18: '18px',
+      x16: '16px',
+      x15: '15px',
+      x13: '13px',
+      x14: '14px',
+      x12: '12px'
+    },
     colors: {
       'transparent': 'transparent',
       'white': '#ffffff',
@@ -46,14 +64,16 @@ module.exports = {
       'kimberly': '#827BA9',
       'pink': 'rgb(255, 200, 205)',
       'lightPink': 'rgb(255, 200, 205,0.3)',
+      'solidAnakiwa': 'rgb(176, 216, 254)',
       'anakiwa': 'rgb(176, 216, 254,0.3)',
-      'lightLavender': 'rgb( 220, 180, 245,0.4)'
+      'lightLavender': 'rgb( 220, 180, 245,0.4)',
+      'gray': '#E2DFF0',
+      'extraLightLavender': 'rgba(247, 235, 255, 0.3)'
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
       mulish: ['"Mulish"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
       mukta: ['"Mukta"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+      montserrat: ['Montserrat', 'sans-serif'],
     },
     extend: {
       spacing: {

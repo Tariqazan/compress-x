@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
                         <div className="grid grid-cols-1 md:grid-cols-3">
                             <div className="logo">
                                 <Image src={Logo} alt="logo" />
-                                <p className='my-5 text-base md:text-lg lg:text-xl text-butterflyBush font-mulish normal font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl enim turpis id nam duis id. Velit in eget velit vestibulum morbi. </p>
+                                <p className='my-5 text-x16 md:text-x18 lg:text-x20 text-butterflyBush font-mulish normal font-normal leading-9'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl enim turpis id nam duis id. Velit in eget velit vestibulum morbi. </p>
                                 <div className='flex my-5'>
                                     <Image className='mr-4' src={Facebook} alt="Facebook" />
                                     <Image className='mr-4' src={Line} alt="Line1" />
@@ -27,21 +27,21 @@ export default class Footer extends React.Component {
                                 </div>
                             </div>
                             <div className="links">
-                                <p className="mb-5 text-pink font-mulish font-bold text-base md:text-lg px-0 md:px-20">Quick Links</p>
-                                <ul className="menu menu-vertical px-0 md:px-20">
-                                    <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Home</Link></li>
-                                    <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">FAQ</Link></li>
-                                    <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Blog</Link></li>
-                                    <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Pricing</Link></li>
-                                    <li><Link href={"#"} className="font-mulish normal font-normal text-md text-martinique">Contact</Link></li>
+                                <p className="mb-5 text-lavender font-mulish font-bold text-x14 md:text-x16 lg:text-x18 px-0 md:px-5 lg:px-10">Quick Links</p>
+                                <ul className="menu menu-vertical px-0 md:px-5 lg:px-7">
+                                    <li><Link href={"#"} className="font-mulish normal font-normal text-x14 md:text-x16 lg:text-x18 text-martinique">Home</Link></li>
+                                    <li><Link href={"#"} className="font-mulish normal font-normal text-x14 md:text-x16 lg:text-x18 text-martinique">FAQ</Link></li>
+                                    <li><Link href={"#"} className="font-mulish normal font-normal text-x14 md:text-x16 lg:text-x18 text-martinique">Blog</Link></li>
+                                    <li><Link href={"#"} className="font-mulish normal font-normal text-x14 md:text-x16 lg:text-x18 text-martinique">Pricing</Link></li>
+                                    <li><Link href={"#"} className="font-mulish normal font-normal text-x14 md:text-x16 lg:text-x18 text-martinique">Contact</Link></li>
                                 </ul>
                             </div>
-                            <div className="newsletter">
-                                <p className="mb-10 text-pink font-mulish font-bold text-base md:text-lg">Newsletter</p>
-                                <p className='mb-5 text-base md:text-lg lg:text-xl text-butterflyBush font-mulish normal font-normal'>Please enter your email</p>
-                                <div className="flex">
-                                    <input type="text" placeholder='Email' className='px-8 py-2 border-t border-l border-b border-r-0 border-martinique rounded' />
-                                    <button className='bg-gradient-to-r from-lavender to-minsk rounded py-3 px-10 font-mulish font-normal normal font-black text-white uppercase'>Send</button>
+                            <div className="newsletter mt-5 md:mt-0">
+                                <p className="md:mb-10 mb-4 text-lavender font-mulish font-bold text-x14 md:text-x16 lg:text-x18">Newsletter</p>
+                                <p className='mb-5 text-x14 md:text-x16 lg:text-x18 text-butterflyBush font-mulish normal font-normal'>Please enter your email</p>
+                                <div className="flex md:block lg:flex">
+                                    <input type="text" placeholder="Email" className="mb-0 md:mb-8 lg:mb-0 w-48 md:w-52 lg:w-64 input input-bordered px-8 py-2 border-martinique rounded" />
+                                    <span className='text-x14 md:text-x16 lg:text-x18 w-32 md:w-44 lg:w-32 text-center bg-gradient-to-r from-lavender to-minsk rounded py-3 px-5 font-mulish font-normal normal font-black text-white uppercase'>send</span>
                                 </div>
                             </div>
                         </div>
@@ -49,11 +49,11 @@ export default class Footer extends React.Component {
                 </div>
                 <div className="bg-gradient-to-r from-lightPink to-anakiwa py-5">
                     <div className="container mx-auto">
-                        <div className="flex justify-between">
-                            <p className='font-mulish font-normal normal text-minsk text-sm md:text-base'>© 2022 CompressorX. All rights reserved</p>
+                        <div className="block md:flex md:justify-between text-center">
+                            <p className='font-mulish font-normal normal text-minsk text-x12 md:text-x14 lg:text-x18 md:mb-0 mb-3'>© 2022 CompressorX. All rights reserved</p>
                             <div className="info-links">
-                                <Link href={"#"} className="font-mulish font-normal normal underline text-minsk text-sm md:text-base">Cookies</Link>
-                                <Link href={"#"} className="font-mulish font-normal normal underline text-minsk text-sm md:text-base ml-10">Privacy Policy</Link>
+                                <Link href={"#"} className="font-mulish font-normal normal underline text-minsk text-x12 md:text-x14 lg:text-x18">Cookies</Link>
+                                <Link href={"#"} className="ml-4 font-mulish font-normal normal underline text-minsk text-x12 md:text-x14 lg:text-x18">Privacy Policy</Link>
                             </div>
                         </div>
                     </div>

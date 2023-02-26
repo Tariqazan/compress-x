@@ -3,7 +3,7 @@ import { MinusIcon } from "../svg/Minus";
 import { PlusIcon } from "../svg/Plus";
 
 export default function (props) {
-    const [isShowing, setIsShowing] = useState(false);
+    const [isShowing, setIsShowing] = useState(props.isShowing);
 
     const toggle = () => {
         setIsShowing(!isShowing);
@@ -11,7 +11,7 @@ export default function (props) {
 
     return (
         <div className="accordion">
-            <button className={isShowing ? "accordion-btn-active" : "accordion-btn"}
+            <button className={isShowing ? "accordion-btn-active mb-5" : "accordion-btn"}
                 onClick={toggle}
                 type="button"
             >
